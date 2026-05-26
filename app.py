@@ -1,7 +1,5 @@
 import streamlit as st
 import requests
-from dotenv import load_dotenv
-import os
 from datetime import datetime
 import html
 
@@ -20,8 +18,7 @@ st.set_page_config(
 # OPENROUTER API KEY & MODEL
 # =========================================================
 
-load_dotenv()
-API_KEY   = os.getenv("OPENROUTER_API_KEY")
+API_KEY   = st.secrets["OPENROUTER_API_KEY"]
 MODEL_NAME = "openrouter/free"
 
 # =========================================================
